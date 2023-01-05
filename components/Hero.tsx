@@ -17,7 +17,7 @@ function Hero({}: Props) {
       <BackgroundCircles />
       <img
         className='relative rounded-full h-32 w-32 mx-auto object-cover'
-        src='https://avatars.githubusercontent.com/u/103476893?v=4'
+        src='https://kt946.github.io/my-portfolio-react/static/media/portrait.37f361d29b4f12fa72e7.png'
         alt=''
       />
       <div className='z-20'>
