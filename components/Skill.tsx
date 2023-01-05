@@ -15,7 +15,7 @@ function Skill({ directionLeft }: Props) {
         }}
         transition={{ duration: 1 }}
         whileInView={{ opacity: 1, x: 0 }}
-        src='https://res.cloudinary.com/practicaldev/image/fetch/s--i_xQkWHO--/c_fill,f_auto,fl_progressive,h_320,q_auto,w_320/https://dev-to-uploads.s3.amazonaws.com/uploads/organization/profile_image/207/23eb8886-4b62-4a01-ac2b-7aafb500ad26.png'
+        src='https://cdn.sanity.io/images/djq1iaeq/production/6ed24a12e20d2560228d57a576ee4b2c6c7acda8-512x512.png'
         className='rounded-full border border-gray-500 object-cover w-24 h-24 md:w-28 md:h-28 
         xl:w-32 xl:h-32 filter group-hover:grayscale transition duration-300 ease-in-out'
       />
