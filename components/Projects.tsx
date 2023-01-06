@@ -24,7 +24,7 @@ function Projects({ projects }: Props) {
       >
         {projects.map((project, i) => (
           <div
-            key={i}
+            key={project._id}
             className='w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen'
           >
             <motion.img
@@ -49,7 +49,7 @@ function Projects({ projects }: Props) {
 
               <div className='flex items-center space-x-2 justify-center'>
                 {project?.technologies.map((technology) => (
-                  <img 
+                  <img
                     className='h-10 w-10'
                     key={technology._id}
                     src={urlFor(technology.image).url()}
@@ -58,9 +58,7 @@ function Projects({ projects }: Props) {
                 ))}
               </div>
 
-              <p className='text-lg text-center md:text-left'>
-                {project?.summary}
-              </p>
+              <p className='text-lg text-center md:text-left'>{project?.summary}</p>
             </div>
           </div>
         ))}
