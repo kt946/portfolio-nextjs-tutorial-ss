@@ -1,9 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { PageInfo } from '../typings';
+import { urlFor } from '../sanity';
 
-type Props = {};
+type Props = {
+  pageInfo: PageInfo;
+};
 
-function About({}: Props) {
+function About({ pageInfo }: Props) {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -22,7 +26,7 @@ function About({}: Props) {
         }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
-        src='https://kt946.github.io/my-portfolio-react/static/media/portrait.37f361d29b4f12fa72e7.png'
+        src={urlFor(pageInfo?.profilePic).url()}
         className='-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[600px]'
       />
 
@@ -33,13 +37,7 @@ function About({}: Props) {
           {' '}background
         </h4>
         <p className='text-base'>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. In accusamus reprehenderit iste doloremque
-          voluptatum rerum deserunt omnis, molestias a dolore, libero minima nobis non mollitia doloribus saepe quaerat
-          debitis fugiat. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut ullam recusandae, sint tenetur
-          omnis reiciendis, quis id illo labore pariatur corporis, libero atque magni voluptate deleniti a? Tempora,
-          assumenda temporibus! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias nulla consequuntur
-          porro eum cum minus placeat expedita impedit! Aperiam mollitia nobis nemo fugiat repellendus reprehenderit
-          necessitatibus iusto optio similique dicta.
+          {pageInfo?.backgroundInformation}
         </p>
       </div>
     </motion.div>
