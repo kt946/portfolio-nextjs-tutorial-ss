@@ -52,11 +52,11 @@ export interface Experience extends SanityBody {
 }
 
 export interface Project extends SanityBody {
-  tite: string;
+  title: string;
   _type: 'project';
   image: Image;
   linkToBuild: string;
-  summart: string;
+  summary: string;
   technologies: Technology[];
 }
 
